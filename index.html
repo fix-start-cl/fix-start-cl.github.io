@@ -414,7 +414,7 @@
       width: 52px;
       height: 52px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #003366, #0066CC);
+      background: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -422,13 +422,14 @@
       font-weight: 800;
       font-size: 1.1rem;
       flex-shrink: 0;
+      overflow: hidden;
+      border: 1px solid #e8ecf0;
     }
-    .caso-logo.citi { background: linear-gradient(135deg, #003B70, #0066b2); }
-    .caso-logo.bch { background: linear-gradient(135deg, #CC0000, #e60000); }
-    .caso-logo.san { background: linear-gradient(135deg, #CC0000, #e60000); }
-    .caso-logo.wom { background: linear-gradient(135deg, #5E17EB, #8b5cf6); }
-    .caso-logo.cgr { background: linear-gradient(135deg, #1a5632, #22803d); }
-    .caso-logo.cen { background: linear-gradient(135deg, #e63946, #ff6b6b); }
+    .caso-logo img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
     .caso-info h4 {
       font-size: 1.1rem;
       font-weight: 700;
@@ -480,15 +481,22 @@
       font-size: 1.6rem;
       font-weight: 800;
       color: #fff;
+      overflow: hidden;
+      background: #f0f4f8;
     }
-    .cliente-icon.c-citi { background: linear-gradient(135deg, #003B70, #0066b2); }
-    .cliente-icon.c-bch { background: linear-gradient(135deg, #CC0000, #e60000); }
-    .cliente-icon.c-san { background: linear-gradient(135deg, #CC0000, #ff3333); }
-    .cliente-icon.c-wom { background: linear-gradient(135deg, #5E17EB, #8b5cf6); }
-    .cliente-icon.c-cgr { background: linear-gradient(135deg, #1a5632, #22803d); }
-    .cliente-icon.c-cen { background: linear-gradient(135deg, #e63946, #ff6b6b); }
-    .cliente-icon.c-gas { background: linear-gradient(135deg, #0077b6, #00b4d8); }
-    .cliente-icon.c-kib { background: linear-gradient(135deg, #003366, #0066CC); }
+    .cliente-icon img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+    .cliente-icon.c-citi { background: #fff; }
+    .cliente-icon.c-bch { background: #fff; }
+    .cliente-icon.c-san { background: #fff; }
+    .cliente-icon.c-wom { background: #fff; }
+    .cliente-icon.c-cgr { background: #fff; }
+    .cliente-icon.c-cen { background: #fff; }
+    .cliente-icon.c-gas { background: #fff; }
+    .cliente-icon.c-kib { background: #fff; }
     .cliente-card h4 {
       font-size: 1rem;
       font-weight: 700;
@@ -597,6 +605,77 @@
       font-size: 0.9rem;
       color: rgba(255,255,255,0.6);
       line-height: 1.6;
+    }
+
+    /* ===== REFERENCIAS ===== */
+    .referencias { background: #fff; }
+    .referencias-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .ref-card {
+      background: #f8fafc;
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid #e8ecf0;
+      transition: all 0.35s;
+      position: relative;
+    }
+    .ref-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,51,102,0.08);
+      border-color: rgba(0,102,204,0.15);
+    }
+    .ref-quote {
+      color: #00AAFF;
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      opacity: 0.6;
+    }
+    .ref-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .ref-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-top: 1px solid #e8ecf0;
+      padding-top: 20px;
+    }
+    .ref-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid #e8ecf0;
+      flex-shrink: 0;
+    }
+    .ref-avatar img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .ref-author h5 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #003366;
+    }
+    .ref-author span {
+      font-size: 0.78rem;
+      color: #0066CC;
+      font-weight: 500;
+    }
+    @media (max-width: 1024px) {
+      .referencias-grid { grid-template-columns: 1fr; }
     }
 
     /* ===== CONTACT ===== */
@@ -888,6 +967,7 @@
         <a href="#casos">Casos de &Eacute;xito</a>
         <a href="#clientes">Clientes</a>
         <a href="#nosotros">Nosotros</a>
+        <a href="#referencias">Referencias</a>
         <a href="#contacto" class="nav-cta">Contacto</a>
       </div>
       <div class="hamburger" id="hamburger">
@@ -996,7 +1076,7 @@
       <div class="casos-grid">
         <div class="caso-card fade-in">
           <div class="caso-header">
-            <div class="caso-logo citi">CB</div>
+            <div class="caso-logo citi"><img src="https://logo.clearbit.com/citigroup.com" alt="Citibank"></div>
             <div class="caso-info">
               <h4>Citibank</h4>
               <span class="caso-tag">Banca Internacional</span>
@@ -1006,7 +1086,7 @@
         </div>
         <div class="caso-card fade-in">
           <div class="caso-header">
-            <div class="caso-logo bch">BC</div>
+            <div class="caso-logo bch"><img src="https://logo.clearbit.com/bancochile.cl" alt="Banco de Chile"></div>
             <div class="caso-info">
               <h4>Banco de Chile</h4>
               <span class="caso-tag">Banca Nacional</span>
@@ -1016,7 +1096,7 @@
         </div>
         <div class="caso-card fade-in">
           <div class="caso-header">
-            <div class="caso-logo san">BS</div>
+            <div class="caso-logo san"><img src="https://logo.clearbit.com/santander.cl" alt="Banco Santander"></div>
             <div class="caso-info">
               <h4>Banco Santander</h4>
               <span class="caso-tag">Banca Nacional</span>
@@ -1026,7 +1106,7 @@
         </div>
         <div class="caso-card fade-in">
           <div class="caso-header">
-            <div class="caso-logo wom">W</div>
+            <div class="caso-logo wom"><img src="https://logo.clearbit.com/wom.cl" alt="WOM"></div>
             <div class="caso-info">
               <h4>WOM</h4>
               <span class="caso-tag">Telecomunicaciones</span>
@@ -1036,7 +1116,7 @@
         </div>
         <div class="caso-card fade-in">
           <div class="caso-header">
-            <div class="caso-logo cgr">CR</div>
+            <div class="caso-logo cgr"><img src="https://logo.clearbit.com/contraloria.cl" alt="Contralor&iacute;a"></div>
             <div class="caso-info">
               <h4>Contralor&iacute;a General de la Rep&uacute;blica</h4>
               <span class="caso-tag">Sector P&uacute;blico</span>
@@ -1046,7 +1126,7 @@
         </div>
         <div class="caso-card fade-in">
           <div class="caso-header">
-            <div class="caso-logo cen">SI</div>
+            <div class="caso-logo cen"><img src="https://logo.clearbit.com/cencosud.com" alt="Cencosud"></div>
             <div class="caso-info">
               <h4>Cencosud &mdash; Santa Isabel</h4>
               <span class="caso-tag">Retail</span>
@@ -1068,42 +1148,42 @@
       </div>
       <div class="clientes-grid">
         <div class="cliente-card fade-in">
-          <div class="cliente-icon c-citi">CB</div>
+          <div class="cliente-icon c-citi"><img src="https://logo.clearbit.com/citigroup.com" alt="Citibank"></div>
           <h4>Citibank</h4>
           <span class="cliente-sector">Banca Internacional</span>
         </div>
         <div class="cliente-card fade-in">
-          <div class="cliente-icon c-bch">BC</div>
+          <div class="cliente-icon c-bch"><img src="https://logo.clearbit.com/bancochile.cl" alt="Banco de Chile"></div>
           <h4>Banco de Chile</h4>
           <span class="cliente-sector">Banca Nacional</span>
         </div>
         <div class="cliente-card fade-in">
-          <div class="cliente-icon c-san">BS</div>
+          <div class="cliente-icon c-san"><img src="https://logo.clearbit.com/santander.cl" alt="Banco Santander"></div>
           <h4>Banco Santander</h4>
           <span class="cliente-sector">Banca Nacional</span>
         </div>
         <div class="cliente-card fade-in">
-          <div class="cliente-icon c-wom">W</div>
+          <div class="cliente-icon c-wom"><img src="https://logo.clearbit.com/wom.cl" alt="WOM"></div>
           <h4>WOM</h4>
           <span class="cliente-sector">Telecomunicaciones</span>
         </div>
         <div class="cliente-card fade-in">
-          <div class="cliente-icon c-cgr">CR</div>
+          <div class="cliente-icon c-cgr"><img src="https://logo.clearbit.com/contraloria.cl" alt="Contralor&iacute;a"></div>
           <h4>Contralor&iacute;a General</h4>
           <span class="cliente-sector">Sector P&uacute;blico</span>
         </div>
         <div class="cliente-card fade-in">
-          <div class="cliente-icon c-cen">SI</div>
+          <div class="cliente-icon c-cen"><img src="https://logo.clearbit.com/cencosud.com" alt="Cencosud"></div>
           <h4>Cencosud</h4>
           <span class="cliente-sector">Retail</span>
         </div>
         <div class="cliente-card fade-in">
-          <div class="cliente-icon c-gas">G</div>
+          <div class="cliente-icon c-gas"><img src="https://logo.clearbit.com/gasco.cl" alt="Gasco"></div>
           <h4>Gasco S.A.</h4>
           <span class="cliente-sector">Energ&iacute;a</span>
         </div>
         <div class="cliente-card fade-in">
-          <div class="cliente-icon c-kib">K</div>
+          <div class="cliente-icon c-kib"><img src="https://logo.clearbit.com/kibernum.com" alt="Kibernum"></div>
           <h4>Kibernum</h4>
           <span class="cliente-sector">Consultor&iacute;a IT</span>
         </div>
@@ -1132,6 +1212,11 @@
         <div class="tech-tag"><i class="fab fa-microsoft"></i> Azure</div>
         <div class="tech-tag"><i class="fas fa-database"></i> Oracle</div>
         <div class="tech-tag"><i class="fas fa-database"></i> PostgreSQL</div>
+        <div class="tech-tag"><i class="fas fa-cube"></i> SAP CRM</div>
+        <div class="tech-tag"><i class="fas fa-cube"></i> SAP ERP</div>
+        <div class="tech-tag"><i class="fas fa-cube"></i> SAP B1</div>
+        <div class="tech-tag"><i class="fas fa-cube"></i> SAP S/4HANA</div>
+        <div class="tech-tag"><i class="fas fa-cube"></i> SAP BW</div>
       </div>
     </div>
   </section>
@@ -1181,6 +1266,52 @@
           <div class="about-card">
             <h4><i class="fas fa-hand-holding-heart"></i> &nbsp;Nuestros Valores</h4>
             <p>Transparencia, responsabilidad, innovaci&oacute;n y orientaci&oacute;n al resultado. Creemos que la tecnolog&iacute;a debe servir a las personas y al negocio por igual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REFERENCIAS ===== -->
+  <section class="referencias section-padding" id="referencias">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Respaldo profesional</span>
+        <h2 class="section-title">Referencias</h2>
+        <p class="section-subtitle mx-auto">Profesionales y empresas que avalan nuestra trayectoria y calidad de trabajo.</p>
+      </div>
+      <div class="referencias-grid">
+        <div class="ref-card fade-in">
+          <div class="ref-quote"><i class="fas fa-quote-left"></i></div>
+          <p>Excelente profesional con dominio t&eacute;cnico excepcional. Su liderazgo fue clave en la tokenizaci&oacute;n de pagos digitales y la transformaci&oacute;n de nuestra experiencia inmobiliaria.</p>
+          <div class="ref-author">
+            <div class="ref-avatar"><img src="https://logo.clearbit.com/bancochile.cl" alt="Banco de Chile"></div>
+            <div>
+              <h5>Banco de Chile</h5>
+              <span>C&eacute;lula de Desarrollo &mdash; Banca Digital</span>
+            </div>
+          </div>
+        </div>
+        <div class="ref-card fade-in">
+          <div class="ref-quote"><i class="fas fa-quote-left"></i></div>
+          <p>Logr&oacute; reducir las ca&iacute;das de nuestros sistemas de 6 diarias a 0, impactando directamente a m&aacute;s de 5 millones de clientes. Un aporte invaluable a nuestra operaci&oacute;n.</p>
+          <div class="ref-author">
+            <div class="ref-avatar"><img src="https://logo.clearbit.com/wom.cl" alt="WOM"></div>
+            <div>
+              <h5>WOM Chile</h5>
+              <span>Gerencia de Front End &mdash; Tecnolog&iacute;a</span>
+            </div>
+          </div>
+        </div>
+        <div class="ref-card fade-in">
+          <div class="ref-quote"><i class="fas fa-quote-left"></i></div>
+          <p>Su capacidad para ejecutar el upgrade de SpringBoot 1.5 a 3.2 con arquitectura hexagonal fue impecable, fortaleciendo significativamente nuestra postura de seguridad.</p>
+          <div class="ref-author">
+            <div class="ref-avatar"><img src="https://logo.clearbit.com/citigroup.com" alt="Citibank"></div>
+            <div>
+              <h5>Citibank</h5>
+              <span>&Aacute;rea de Mensajer&iacute;a &mdash; Desarrollo</span>
+            </div>
           </div>
         </div>
       </div>
